@@ -38,7 +38,7 @@ public class MainPage {
         driver.findElement(cookieAcceptButton).click();
     }
 
-    //Method. Accordion
+
     public void clickFaqAccordionItemHeading() {
         WebElement element = driver.findElement(faqAccordionItemHeading);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
@@ -47,10 +47,12 @@ public class MainPage {
     }
 
     public WebElement getFaqAccordionItemPanel() {
+
         return driver.findElement(faqAccordionItemPanel);
     }
 
     public WebElement getFaqAccordionItemPanelText() {
+
         return driver.findElement(faqAccordionItemPanelText);
     }
 

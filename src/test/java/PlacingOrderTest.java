@@ -54,12 +54,12 @@ public class PlacingOrderTest {
     @Before
     public void startUp() {
         WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.get("https://qa-scooter.praktikum-services.ru/");
     }
 
     @Test
     public void checkPlacingOrder() {
-        driver = new ChromeDriver();
-        driver.get("https://qa-scooter.praktikum-services.ru/");
 
         MainPage objMainPage = new MainPage(driver);
         OrderPage objOrderPage = new OrderPage(driver);
